@@ -1,18 +1,7 @@
-Com certeza! Pelo que vi das imagens que você gostou, o estilo é bem parecido com **Vogue Paris**, **Dior**, **Chanel** e revistas francesas minimalistas. Abaixo está um `style.css` completo para você começar o blog **Márcia Lumière**.
 
-> **Paleta de cores**
->
-> * Creme: `#F8F4EE`
-> * Bege: `#EFE6DA`
-> * Rosé queimado: `#B77A72`
-> * Marrom: `#6C5446`
-> * Dourado: `#C9A66B`
 
-```css
-/* ===========================
-   MÁRCIA LUMIÈRE
-   Style Vintage Editorial
-=========================== */
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
