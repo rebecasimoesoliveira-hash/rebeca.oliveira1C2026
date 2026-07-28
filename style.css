@@ -1,0 +1,435 @@
+Com certeza! Pelo que vi das imagens que você gostou, o estilo é bem parecido com **Vogue Paris**, **Dior**, **Chanel** e revistas francesas minimalistas. Abaixo está um `style.css` completo para você começar o blog **Márcia Lumière**.
+
+> **Paleta de cores**
+>
+> * Creme: `#F8F4EE`
+> * Bege: `#EFE6DA`
+> * Rosé queimado: `#B77A72`
+> * Marrom: `#6C5446`
+> * Dourado: `#C9A66B`
+
+```css
+/* ===========================
+   MÁRCIA LUMIÈRE
+   Style Vintage Editorial
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F8F4EE;
+    color:#5E4638;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+/* NAVBAR */
+
+header{
+
+    width:100%;
+    height:90px;
+
+    position:fixed;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px;
+
+    background:rgba(248,244,238,.93);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #e5d8ca;
+
+    z-index:999;
+
+}
+
+.logo h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:#B77A72;
+
+    letter-spacing:2px;
+
+    font-weight:500;
+
+}
+
+.logo p{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#8d7868;
+
+}
+
+nav{
+
+    display:flex;
+    gap:40px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#6C5446;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.4s;
+
+}
+
+nav a:hover{
+
+    color:#B77A72;
+
+}
+
+/* HERO */
+
+.hero{
+
+    margin-top:90px;
+
+    height:90vh;
+
+    background-image:url("imagens/banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.overlay{
+
+    width:700px;
+
+    background:rgba(248,244,238,.75);
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+.overlay h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:80px;
+
+    color:#B77A72;
+
+    font-weight:500;
+
+}
+
+.overlay h3{
+
+    margin-top:20px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    font-style:italic;
+
+    color:#6C5446;
+
+}
+
+.overlay p{
+
+    margin-top:25px;
+
+    font-size:16px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+/* BOTÃO */
+
+.botao{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:16px 50px;
+
+    background:#B77A72;
+
+    color:white;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
+}
+
+.botao:hover{
+
+    background:#6C5446;
+
+}
+
+/* TÍTULOS */
+
+section h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    color:#B77A72;
+
+    margin-bottom:60px;
+
+}
+
+/* POSTS */
+
+.posts{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:120px 0;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    border:1px solid #eaded3;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    padding:25px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    color:#6C5446;
+
+}
+
+.card p{
+
+    padding:0 25px 25px;
+
+    line-height:30px;
+
+    color:#7d6b5f;
+
+}
+
+/* FRASE */
+
+.frase{
+
+    width:100%;
+
+    background:#EFE6DA;
+
+    padding:120px;
+
+    text-align:center;
+
+}
+
+.frase blockquote{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:50px;
+
+    color:#6C5446;
+
+    font-style:italic;
+
+}
+
+/* RODAPÉ */
+
+footer{
+
+    background:#5E4638;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+footer h2{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+footer p{
+
+    letter-spacing:2px;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+.grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.overlay{
+
+width:90%;
+
+}
+
+.overlay h2{
+
+font-size:55px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+height:auto;
+
+}
+
+nav{
+
+margin-top:20px;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.overlay h2{
+
+font-size:42px;
+
+}
+
+.overlay h3{
+
+font-size:25px;
+
+}
+
+.frase blockquote{
+
+font-size:34px;
+
+}
