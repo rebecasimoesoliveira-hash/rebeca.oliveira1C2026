@@ -1,4 +1,1282 @@
+*{/*=============================================
+    MÁRCIA LUMIÈRE
+    STYLE.CSS
+    Parte 1
+=============================================*/
+
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/*=========================
+RESET
+=========================*/
+
 *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#F8F4EE;
+
+font-family:'Montserrat',sans-serif;
+
+color:#4B4037;
+
+overflow-x:hidden;
+
+}
+
+
+/*=========================
+CORES
+=========================*/
+
+:root{
+
+--creme:#F8F4EE;
+
+--bege:#EFE4D6;
+
+--rose:#C69A90;
+
+--rose2:#B47B72;
+
+--marrom:#6A5244;
+
+--marrom2:#4B4037;
+
+--dourado:#C4A66B;
+
+--cinza:#9C8F86;
+
+--branco:#FFFFFF;
+
+--sombra:0 15px 40px rgba(0,0,0,.08);
+
+--radius:18px;
+
+}
+
+/*=========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--creme);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--rose);
+
+border-radius:50px;
+
+}
+
+/*=========================
+SELEÇÃO
+=========================*/
+
+::selection{
+
+background:var(--rose);
+
+color:white;
+
+}
+
+/*=========================
+LINKS
+=========================*/
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+/*=========================
+IMAGENS
+=========================*/
+
+img{
+
+display:block;
+
+width:100%;
+
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:95px;
+
+background:rgba(248,244,238,.90);
+
+backdrop-filter:blur(15px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 80px;
+
+z-index:9999;
+
+border-bottom:1px solid #eadfd2;
+
+transition:.5s;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.logo h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:48px;
+
+font-weight:500;
+
+letter-spacing:3px;
+
+color:var(--rose2);
+
+}
+
+.logo p{
+
+margin-top:-8px;
+
+font-size:11px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:var(--cinza);
+
+}
+
+/*=========================
+MENU
+=========================*/
+
+nav{
+
+display:flex;
+
+gap:45px;
+
+}
+
+nav a{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+position:relative;
+
+transition:.4s;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:1px;
+
+background:var(--rose);
+
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:var(--rose);
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+height:100vh;
+
+background-image:url("https://pin.it/6nxki04Vv");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(248,244,238,.45);
+
+}
+
+/*=========================
+CAIXA CENTRAL
+=========================*/
+
+.hero-content{
+
+position:relative;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(12px);
+
+padding:80px;
+
+width:850px;
+
+text-align:center;
+
+border-radius:var(--radius);
+
+box-shadow:var(--sombra);
+
+}
+
+/*=========================
+TÍTULO
+=========================*/
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:85px;
+
+font-weight:500;
+
+letter-spacing:3px;
+
+color:var(--rose2);
+
+}
+
+/*=========================
+SLOGAN
+=========================*/
+
+.hero h2{
+
+margin-top:10px;
+
+font-family:'Playfair Display',serif;
+
+font-size:35px;
+
+font-style:italic;
+
+font-weight:400;
+
+color:var(--marrom);
+
+}
+
+/*=========================
+FRASE
+=========================*/
+
+.hero p{
+
+margin-top:30px;
+
+font-size:16px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+line-height:30px;
+
+color:var(--cinza);
+
+}
+
+/*=========================
+BOTÃO
+=========================*/
+
+.botao{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 50px;
+
+background:var(--rose);
+
+color:white;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+border-radius:40px;
+
+transition:.5s;
+
+font-size:13px;
+
+}
+
+.botao:hover{
+
+background:var(--marrom);
+
+transform:translateY(-5px);
+
+box-shadow:var(--sombra);
+
+}
+
+/*=========================
+TÍTULOS
+=========================*/
+
+.titulo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:58px;
+
+font-weight:500;
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:var(--rose2);
+
+}
+
+.subtitulo{
+
+text-align:center;
+
+color:var(--cinza);
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+font-size:13px;
+
+margin-bottom:80px;
+
+}
+
+/*=========================
+SECTIONS
+=========================*/
+
+section{
+
+padding:120px 8%;
+
+}
+
+/*=========================
+ANIMAÇÕES
+=========================*/
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero-content{
+
+animation:fade 1.3s ease;
+
+
+}/*=============================================
+    MÁRCIA LUMIÈRE
+    STYLE.CSS
+    Parte 2 - Categorias Editorial
+=============================================*/
+
+/*=================================
+SEÇÃO PRINCIPAL
+=================================*/
+
+.categorias{
+
+    background:var(--creme);
+
+}
+
+.grid-categorias{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+/*=================================
+CARD
+=================================*/
+
+.categoria-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:.5s;
+
+    cursor:pointer;
+
+}
+
+.categoria-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+/*=================================
+IMAGENS
+=================================*/
+
+.categoria-card img{
+
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+.categoria-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*=================================
+TEXTO
+=================================*/
+
+.categoria-info{
+
+    padding:45px;
+
+}
+
+.categoria-info h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:var(--rose2);
+
+    margin-bottom:20px;
+
+}
+
+.categoria-info p{
+
+    line-height:34px;
+
+    color:var(--marrom);
+
+    font-size:16px;
+
+    margin-bottom:35px;
+
+}
+
+/*=================================
+LINK
+=================================*/
+
+.categoria-info a{
+
+    color:var(--rose2);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    transition:.4s;
+
+}
+
+.categoria-info a:hover{
+
+    letter-spacing:5px;
+
+}
+
+/*=================================
+LINHA DECORATIVA
+=================================*/
+
+.divisor{
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--dourado);
+
+    margin:18px auto 70px;
+
+}
+
+/*=================================
+CARDS ESPECÍFICOS
+=================================*/
+
+/* 1 - Élégance Intemporelle */
+
+.elegance img{
+
+background-image:url("https://pin.it/52wbTWz3c");
+
+}
+
+/* 2 - Les Pièces Qui Ne Se Démodent Jamais */
+
+.timeless img{
+
+background-image:url("https://pin.it/VxymHvoUb");
+
+}
+
+/* 3 - Histoires & Icônes */
+
+.icons img{
+
+background-image:url("https://pin.it/REzczo71n");
+
+}
+
+/* 4 - Haute Couture */
+
+.couture img{
+
+background-image:url("https://pin.it/3bZB8t6X2");
+
+}
+
+/*=================================
+FRASE EDITORIAL
+=================================*/
+
+.editorial{
+
+background:linear-gradient(
+90deg,
+#F8F4EE,
+#EFE4D6,
+#F8F4EE);
+
+padding:130px 10%;
+
+text-align:center;
+
+}
+
+.editorial h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:70px;
+
+font-weight:500;
+
+color:var(--rose2);
+
+margin-bottom:35px;
+
+}
+
+.editorial p{
+
+max-width:900px;
+
+margin:auto;
+
+line-height:38px;
+
+font-size:19px;
+
+color:var(--marrom);
+
+}
+
+/*=================================
+BOTÃO CENTRAL
+=================================*/
+
+.editorial .botao{
+
+margin-top:60px;
+
+}
+
+/*=================================
+EFEITO NAS IMAGENS
+=================================*/
+
+.categoria-card{
+
+position:relative;
+
+}
+
+.categoria-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:430px;
+
+background:linear-gradient(
+180deg,
+transparent,
+rgba(0,0,0,.15));
+
+transition:.5s;
+
+}
+
+.categoria-card:hover::before{
+
+background:linear-gradient(
+180deg,
+transparent,
+rgba(0,0,0,.30));
+
+}
+
+/*=================================
+RESPONSIVO
+=================================*/
+
+@media(max-width:1000px){
+
+.grid-categorias{
+
+grid-template-columns:1fr;
+
+}
+
+.categoria-card img{
+
+height:350px;
+
+}
+
+.editorial h2{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.categoria-info{
+
+padding:30px;
+
+}
+
+.categoria-info h3{
+
+font-size:34px;
+
+}
+
+.editorial{
+
+padding:90px 30px;
+
+}
+
+.editorial h2{
+
+font-size:38px;
+
+}
+
+.editorial p{
+
+font-size:16px;
+
+line-height:30px;
+
+}
+
+}/*=============================================
+    MÁRCIA LUMIÈRE
+    STYLE.CSS
+    Parte 3 - Revista Editorial
+=============================================*/
+
+/*==============================
+ARTIGOS
+==============================*/
+
+.artigos{
+
+    background:#fff;
+
+}
+
+.grid-artigos{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+.artigo{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:.5s;
+
+}
+
+.artigo:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.artigo img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+.artigo:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.artigo-texto{
+
+    padding:35px;
+
+}
+
+.artigo-texto span{
+
+    color:var(--dourado);
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+}
+
+.artigo-texto h3{
+
+    margin:18px 0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:36px;
+
+    color:var(--rose2);
+
+}
+
+.artigo-texto p{
+
+    line-height:30px;
+
+    color:var(--marrom);
+
+    margin-bottom:30px;
+
+}
+
+/*==============================
+NEWSLETTER
+==============================*/
+
+.newsletter{
+
+    background:linear-gradient(135deg,#F8F4EE,#EFE4D6);
+
+    text-align:center;
+
+}
+
+.newsletter h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:62px;
+
+    color:var(--rose2);
+
+}
+
+.newsletter p{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    line-height:32px;
+
+}
+
+.form-news{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.form-news input{
+
+    width:380px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    box-shadow:var(--sombra);
+
+}
+
+.form-news button{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:var(--rose);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.form-news button:hover{
+
+    background:var(--marrom);
+
+}
+
+/*==============================
+GALERIA
+==============================*/
+
+.galeria{
+
+    background:white;
+
+}
+
+.grid-galeria{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+.grid-galeria img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.5s;
+
+}
+
+.grid-galeria img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==============================
+INSTAGRAM
+==============================*/
+
+.instagram{
+
+    text-align:center;
+
+    padding-top:40px;
+
+}
+
+.instagram h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:40px;
+
+    color:var(--rose2);
+
+}
+
+.instagram p{
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--cinza);
+
+}
+
+/*==============================
+RODAPÉ
+==============================*/
+
+footer{
+
+    background:#4B4037;
+
+    color:rgb(229, 149, 117);
+
+    padding:90px 8%;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+}
+
+.footer-logo h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    color:#F8F4EE;
+
+}
+
+.footer-logo p{
+
+    margin-top:20px;
+
+    line-height:30px;
+
+    color:#ddd;
+
+}
+
+.footer-links h4{
+
+    margin-bottom:20px;
+
+    color:var(--dourado);
+
+    letter-spacing:2px;
+
+}
+
+.footer-links a{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:white;
+
+    padding-left:10px;
+
+}
+
+/*==============================
+COPYRIGHT
+==============================*/
+
+.copy{
+
+    margin-top:70px;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    padding-top:25px;
+
+    text-align:center;
+
+    color:#ddd;
+
+    font-size:14px;
+
+}
+
+/*==============================
+RESPONSIVO
+==============================*/
+
+@media(max-width:1100px){
+
+.grid-artigos{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.grid-galeria{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.grid-artigos{
+
+grid-template-columns:1fr;
+
+}
+
+.grid-galeria{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.titulo{
+
+font-size:42px;
+
+}
+
+.newsletter h2{
+
+font-size:44px;
+
+}
+
+.form-news{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.form-news input{
+
+width:100%;
+
+max-width:400px;
+
+}
+
+}
 
 margin:0;
 padding:0;
